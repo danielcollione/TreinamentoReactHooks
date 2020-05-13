@@ -22,7 +22,7 @@ function ConversorMoedas() {
   const [exibirMsgErro, setExibirMsgErro] = useState(false);
 
   function handleValor(event) {
-    setValor(event.target.value.replace(/\D/g, ''));
+    setValor(event.target.value.replace(/\D/g, '')); //reconhece valores não numericos e seta '' para eles.
   }
 
   function handleMoedaDe(event) {
