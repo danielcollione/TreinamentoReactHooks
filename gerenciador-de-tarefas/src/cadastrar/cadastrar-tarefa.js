@@ -17,7 +17,7 @@ function CadastrarTarefa() {
             const tarefasDb=localStorage['tarefas'];
             const tarefas = tarefasDb ? JSON.parse(tarefasDb) : [];
             //persiste a tarefa
-            tarefas.push(new Tarefa(new Date().getTime(), tarefa, false));
+            tarefas.push(new Tarefa(new Date().getTime(), tarefa,  false));
             localStorage['tarefas'] = JSON.stringify(tarefas);
             setExibirModal(true);
             
