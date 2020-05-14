@@ -1,0 +1,26 @@
+criando um app react:
+* npx create-react-app nome-do-projeto;
+
+entre na pasta do projeto:
+* cd nome-do-projeto;
+
+rodar o projeto:
+* npm start;
+
+biblioteca de teste:
+* npm install @testing-library/react @testing-library/jest-dom --save-dev;
+
+realizar teste na aplicação:
+* npm test;
+
+instalar bootstrap:
+npm install react-bootstrap bootstrap --save;
+
+instalar fontawesome:
+npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome;
+
+instalar biblioteca de roteamento:
+npm install --save hookrouter;
+
+prop-types:
+npm install prop-types --save;
