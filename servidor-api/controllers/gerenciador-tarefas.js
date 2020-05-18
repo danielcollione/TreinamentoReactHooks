@@ -55,12 +55,61 @@ function cadastrarTarefa(req, res){
 }
 
 function atualizarTarefa(req, res){
+    if(!req.body['nome'] && !req.body['concluida']) {
+        res.status(400).json({ erro: 'Requisição inválida.' });
+    }
+    const id = req.params.id;
+    let tarefaAtualizada = false;
+    tarefas = tarefas.map(tarefa => {
+        if(tarefa.id === id){
+            tarefa.nome = req.body['nome'];
+            tarefa.concluida = req.body['concluida'];
+            tarefaAtualizada = true;
+        }
+        return tarefa;
+    });
 
+    if(!tarefaAtualizada){
+        res.status(404).json({ erro: 'Tarefa não encontrada!' });
+    }
+    res.json({
+        id: id,
+        nome: req.body['nome'],
+        concluida: req.body['concluida']
+    })
+}
+
+function removerTarefa(req, res){
+    const id = req.params.id;
+    const numTarefas = tarefas.length;
+    tarefas = tarefas.filter(tarefa => tarefa.id !== id);
+    if(numTarefas === tarefas.length) {
+        res.status(404).json({ erro: 'Tarefa não encontrada!' });
+    }
+    res.json({ msg: 'Tarefa removida com sucesso!' });
+}
+
+function concluirTarefa(req, res) {
+    const id = req.params.id;
+    let tarefaConcluida = false;
+    tarefas = tarefas.map(tarefa => { 
+        if(tarefa.id === id){
+            tarefa.concluida = true;
+            tarefaConcluida = true;        
+        }
+        return tarefa;
+    });
+    if(!tarefaConcluida) {
+        res.status(404).json({ erro: 'Tarefa não encontrada.' });
+    }
+    res.json({ msg: 'Tarefa concluída com sucesso!' })
 }
 
 module.exports = {
     listarTarefaId,
     listarTarefas,
     cadastrarTarefa,
-    atualizarTarefa
+    atualizarTarefa,
+    removerTarefa,
+    concluirTarefa
 }
