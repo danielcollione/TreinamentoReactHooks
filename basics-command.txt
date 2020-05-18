@@ -24,3 +24,10 @@ npm install --save hookrouter;
 
 prop-types:
 npm install prop-types --save;
+
+app node:
+npm init;
+npm install express;
+npm body parser;
+npm cors;
+npm uuid;
