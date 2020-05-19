@@ -31,6 +31,13 @@ npm install express;
 npm body parser;
 npm cors;
 npm uuid;
+node index.js; //rodar API
 
 axios biblioteca:
 npm install axios --save
+
+importação calendário react e suporte para BR:
+npm install react-datepicker date-fns@next --save;
+
+importação formulário Formik:
+npm install formik yup --save;
