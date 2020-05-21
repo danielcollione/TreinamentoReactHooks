@@ -1,4 +1,4 @@
-criando um app react:
+﻿criando um app react:
 * npx create-react-app nome-do-projeto;
 
 entre na pasta do projeto:
@@ -14,30 +14,37 @@ realizar teste na aplicação:
 * npm test;
 
 instalar bootstrap:
-npm install react-bootstrap bootstrap --save;
+* npm install react-bootstrap bootstrap --save;
 
 instalar fontawesome:
-npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome;
+* npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome;
 
 instalar biblioteca de roteamento:
-npm install --save hookrouter;
+* npm install --save hookrouter;
 
 prop-types:
-npm install prop-types --save;
+* npm install prop-types --save;
 
 app node:
-npm init;
-npm install express;
-npm body parser;
-npm cors;
-npm uuid;
-node index.js; //rodar API
+* npm init;
+* npm install express;
+* npm body parser;
+* npm cors;
+* npm uuid;
+* node index.js; //rodar API
 
 axios biblioteca:
-npm install axios --save
+* npm install axios --save
 
 importação calendário react e suporte para BR:
-npm install react-datepicker date-fns@next --save;
+* npm install react-datepicker date-fns@next --save;
 
 importação formulário Formik:
-npm install formik yup --save;
+* npm install formik yup --save;
+
+Firebase:
+* npm run build;
+* npm install firebase-tools -g //cmd adm
+* firebase login
+* firebase init
+* firebase deploy
